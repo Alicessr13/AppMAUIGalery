@@ -1,0 +1,67 @@
+# Compiled binary files
+*.dll
+*.exe
+*.so
+*.dylib
+*.pdb
+
+# Build directories
+bin/
+obj/
+
+# User-specific files
+*.userprefs
+*.csproj.user
+*.suo
+*.user
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Logs
+*.log
+
+# Crash Reports
+*.crash
+
+# Visual Studio temporary files
+.vs/
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Mac/iOS files
+*.DS_Store
+*.nib
+*.plist
+
+# Xamarin/Maui specific files
+*.keystore
+*.mddoc
+*.mdb
+*.aps
+
+# Mobile Build Artifacts
+build/
+mtbs/
+*.apk
+*.aab
+*.ipa
+
+# Node.js
+node_modules/
+
+# Dependencies
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Configurations
+appsettings*.json
+
+# Backup files
+*.bak
+*.swp
+*~
