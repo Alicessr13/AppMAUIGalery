@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMAUIGalery.Views.Layouts.GridLayoutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="GridLayoutPage">
+    <!--  modo simplificado  -->
+    <Grid
+        Margin="20"
+        BackgroundColor="AliceBlue"
+        ColumnDefinitions="100, auto, *, 2*"
+        ColumnSpacing="10"
+        RowDefinitions="50, 100,auto"
+        RowSpacing="10">
+        <!--  RowSpacing espaçamento entre as linhas, ColumnSpacing = espaçamento entre colunas  -->
+        <!--  Mesmo resultado das linhas abaixo  -->
+
+        <!--
+        <Grid.ColumnDefinitions>
+             // quantas colunas vai ter o grid, colunas define a largura delas e linhas defina a altura delas
+            <ColumnDefinition Width="100" />
+            //valor fixo
+            <ColumnDefinition Width="Auto" />
+           // valor automatico de acordo com o tamanho que conteudo precisa ocupar
+            <ColumnDefinition Width="*" />
+              //com * ocupa o maximo que der
+            <ColumnDefinition Width="2*" />
+             //numero 2 na frente do * ocupa 2 vezes mais que o outro proporcionalmente, exemplo 6* em uma e 4* em outro fica 60% da tela para a primeira e 40% para a segunda
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        -->
+
+
+        <BoxView BackgroundColor="DarkRed" />
+        <!--  Elemento que vem antes fica atrás  -->
+        <Label
+            HorizontalOptions="Center"
+            Text="Olá mundo"
+            VerticalOptions="Center" />
+
+        <BoxView
+            Grid.Row="0"
+            Grid.Column="1"
+            WidthRequest="50"
+            Color="Blue" />
+        <!--  escolhendo a coluna e linha que vai ficar o elemento, começa do 0  -->
+
+        <BoxView
+            Grid.RowSpan="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Color="Black" />
+        <!--  Grid.ColumnSpan para juntar colunas, exemplo 2 pega a coluna atual e a proxima, Grid.RowSpan tem o mesmo funcionamento  -->
+    </Grid>
+</ContentPage>

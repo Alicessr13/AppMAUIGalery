@@ -20,8 +20,13 @@ internal class CategoryRepository
             Components = new List<Component> { //adicionando um item da classe component que também está na classe category
                 new Component {
                     Titulo = "StackLayout",
-                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    Description = "Organização sequencial dos elementos",
                     Page = typeof(StackLayoutPage) //pega o tipo da página 
+                },
+                new Component {
+                    Titulo = "Grid",
+                    Description = "Organiza os elementos dentro de uma tabela",
+                    Page = typeof(GridLayoutPage) //pega o tipo da página 
                 }
             }
         });
