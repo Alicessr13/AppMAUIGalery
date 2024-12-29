@@ -21,7 +21,7 @@ internal class CategoryRepository
                 new Component {
                     Titulo = "StackLayout",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    Page = new StackLayoutPage()
+                    Page = typeof(StackLayoutPage) //pega o tipo da página 
                 }
             }
         });
