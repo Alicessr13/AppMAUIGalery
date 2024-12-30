@@ -27,6 +27,11 @@ internal class CategoryRepository
                     Titulo = "Grid",
                     Description = "Organiza os elementos dentro de uma tabela",
                     Page = typeof(GridLayoutPage) //pega o tipo da página 
+                },
+                new Component {
+                    Titulo = "Absolute",
+                    Description = "Liberdade total para posicionar e dimensionar os elementos na tela",
+                    Page = typeof(AbsoluteLayoutPage) //pega o tipo da página 
                 }
             }
         });

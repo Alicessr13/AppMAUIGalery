@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMAUIGalery.Views.Layouts.AbsoluteLayoutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="AbsoluteLayoutPage">
+    <AbsoluteLayout>
+        <!--  podem ficar elementos um em cima do outro, pode posicionar o elemento em qualquer lugar desde que o absolute layout tenha dominio  -->
+        <Label
+            AbsoluteLayout.LayoutBounds="150,0,50,50"
+            BackgroundColor="AliceBlue"
+            Text="Ola mundo" />
+        <!--  posicionamento dos elementos AbsoluteLayout.LayoutBounds="x,y,w,h" x e y são posições baseado na margin esquerda(x) e margin superior(y)  -->
+        <!--  w = width e h = height  -->
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5,0.5,200,60"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="clique-me" />
+        <!--  AbsoluteLayout.LayoutFlags = para usar porcentagens proporcionais, XProportional trabalhando com 0 e 1  0,50 = 50%, PositionProportional deixando 50% no x e y  -->
+        <BoxView
+            AbsoluteLayout.LayoutBounds="300,300"
+            HeightRequest="50"
+            WidthRequest="50"
+            Color="Red" />
+        <BoxView
+            AbsoluteLayout.LayoutBounds="325,325"
+            HeightRequest="50"
+            WidthRequest="50"
+            Color="Green" />
+        <BoxView
+            AbsoluteLayout.LayoutBounds="350,350"
+            HeightRequest="50"
+            WidthRequest="50"
+            Color="blue" />
+    </AbsoluteLayout>
+</ContentPage>
