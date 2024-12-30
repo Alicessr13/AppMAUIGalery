@@ -32,6 +32,11 @@ internal class CategoryRepository
                     Titulo = "Absolute",
                     Description = "Liberdade total para posicionar e dimensionar os elementos na tela",
                     Page = typeof(AbsoluteLayoutPage) //pega o tipo da página 
+                },
+                new Component {
+                    Titulo = "FlexLayout",
+                    Description = "Organiza os elementos de forma sequencial com muitas opçãos de personalização",
+                    Page = typeof(FlexLayoutPage) //pega o tipo da página 
                 }
             }
         });

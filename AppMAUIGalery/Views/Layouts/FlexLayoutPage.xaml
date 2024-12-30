@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMAUIGalery.Views.Layouts.FlexLayoutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FlexLayoutPage">
+    <FlexLayout
+        AlignContent="Center"
+        AlignItems="Center"
+        Direction="Column"
+        JustifyContent="SpaceBetween"
+        Wrap="Wrap">
+        <!--  Alterando para coluna(uma unica coluna e elementos em linha), padrão é row(uma unica linha e elementos dispostos em colunas)  -->
+        <!--  ColumnReverse altera a ordem dos elementos e muda para a parte inferior da tela RowReverse tem o mesmo comportamento  -->
+        <!--  AlignItems tem padrão stretch esticado, trabalha com o eixo x(column) e y(row) JustifyContent trabalha no eixo oposto  -->
+        <!--  Wrap="Wrap" quando não tem mais espaço coloca os elementos que não cabem em uma outra linha/coluna padrão noWrap, reverse faz o mesmo mas inverte a ordem  -->
+        <Label
+            Padding="10"
+            BackgroundColor="Red"
+            FlexLayout.AlignSelf="Start"
+            FlexLayout.Basis="50%"
+            FlexLayout.Order="1"
+            Text="Welcome to .NET MAUI! 1" />
+        <!--  FlexLayout.AlignSelf alinha o componente independente dos outros, mas o auto pega o alinhamento do componente pai  -->
+        <!--  FlexLayout.Order para alterar a ordem dos elementos  -->
+        <!--  FlexLayout.Basis altera tamanho assim como o justifyContent no eixo oposto  -->
+        <!--  FlexLayout.Grow elemento expandir o máximo que der(1) ou não(0)  -->
+        <!--  FlexLayout.Shrink="0" o componente passa a ser priorizado, valor 1 e o valor padrão  -->
+        <Label
+            Padding="10"
+            BackgroundColor="Pink"
+            FlexLayout.Grow="1"
+            FlexLayout.Order="0"
+            FlexLayout.Shrink="0"
+            Text="Welcome to .NET MAUI! 2" />
+        <Label
+            Padding="10"
+            BackgroundColor="Purple"
+            FlexLayout.AlignSelf="End"
+            FlexLayout.Order="2"
+            Text="Welcome to .NET MAUI! 3" />
+    </FlexLayout>
+</ContentPage>
