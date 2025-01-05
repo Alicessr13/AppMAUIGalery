@@ -1,4 +1,5 @@
 ﻿using AppMAUIGalery.Models;
+using AppMAUIGalery.Views.Components.Mains;
 using AppMAUIGalery.Views.Layouts;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ internal class CategoryRepository
 {
     public CategoryRepository() { }
 
-    public List<Category> GetCategories() 
+    public List<Category> GetCategories()
     {
         List<Category> categories = new List<Category>(); //lista da classe category
         categories.Add(new Category //adicionando uma category a lista 
@@ -40,6 +41,19 @@ internal class CategoryRepository
                 }
             }
         });
+
+        categories.Add(new Category()
+        {
+            Name = "Componentes (Views)",
+            Components = new List<Component> {
+                new Component {
+                    Titulo = "BoxView",
+                    Description = "Um componente que cria uma caixa para ser apresentada",
+                    Page = typeof(BoxViewPage)
+                }
+            }
+        });
+
         return categories; //retornando a lista da classe category
     }
 }
