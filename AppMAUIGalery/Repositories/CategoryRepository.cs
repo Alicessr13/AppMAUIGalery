@@ -50,6 +50,12 @@ internal class CategoryRepository
                     Titulo = "BoxView",
                     Description = "Um componente que cria uma caixa para ser apresentada",
                     Page = typeof(BoxViewPage)
+                },
+                new Component
+                {
+                    Titulo = "Label",
+                    Description = "Apresenta um texto na tela",
+                    Page = typeof(LabelPage)
                 }
             }
         });
